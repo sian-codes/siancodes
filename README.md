@@ -1,51 +1,38 @@
-# React CV Website
+# Siân’s portfolio
 
-A personal portfolio and CV website built using **React** and **Vite**. This site is designed to showcase the work, skills, and experience of the developer, **Sian-Codes**.
+Personal portfolio built with React, TypeScript and Vite.
 
-## 🚀 Project Purpose
+## Local development
 
-This website serves as an interactive and modern CV for **Sian-Codes**, allowing potential employers, collaborators, and clients to:
+```bash
+npm ci
+npm run dev
+```
 
-- View professional experience and education
-- Explore a portfolio of projects
-- Learn more about technical skills and interests
-- Access contact information
+The site uses the `/siancodes/` base path. Open the local URL with that path, for example http://localhost:5173/siancodes/.
 
-## 🛠️ Tech Stack
+```bash
+npm run build
+npm run preview
+```
 
-- **React** – For building a dynamic and component-based user interface
-- **Vite** – For fast and optimized development tooling
-- **TypeScript** – Application logic
-- **HTML & CSS** – Layout and styling
+## Publishing
 
-## 📦 Getting Started
+Source repository: https://github.com/sian-codes/siancodes
 
-To run the project locally, follow these steps:
+One-time setup in GitHub: open **Settings → Pages** and select **GitHub Actions** as the build source.
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Sian-Codes/website.git
-   cd website
-   
-2. **Install Dependencies**
-   ```bash
-   npm install
+Commit changes and push using GitHub Desktop. Pushes to `main` or `master` run `.github/workflows/deploy.yml`, which builds and deploys the site. You can also run **Deploy portfolio** manually from the repository’s Actions tab.
 
-3. **Start the development server**
-   ```bash
-   npm run dev
+Live site: https://sian-codes.github.io/siancodes/
 
-4. **Open in browser**
-  
-   Navigate to http://localhost:5173 (or the port Vite assigns) to view the site.
+The workflow uses GitHub’s built-in token; no personal access token is needed for deployment. GitHub Desktop handles authentication for source pushes.
 
-## 👩‍💻 Author
+## Source layout
 
-**Sian-Codes**
+- `src/sections`: About, Skills, Experience and Projects
+- `src/components`: shared components
+- `src/styles`: section styles
+- `src/assets`: images and downloadable CV
 
-- GitHub: [Sian-Codes](https://github.com/Sian-Codes)
-- Website: [www.siancodes.com](https://www.siancodes.com)
-
-## 📄 License
-
-This project is open-source and available under the [MIT License](LICENSE).
+To replace the CV, update `src/assets/Sian-Kearley-CV.pdf`.

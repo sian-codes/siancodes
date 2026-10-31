@@ -8,7 +8,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist -r https://github.com/sian-codes/siancodes.git"
   },
   "dependencies": {
     "@awesome.me/kit-459d1b3662": "^1.0.4",
