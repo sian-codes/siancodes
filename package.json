@@ -1,7 +1,7 @@
 {
   "name": "siancodes.com",
   "version": "1.0.0",
-  "homepage": "https://sian-codes.com",
+  "homepage": "https://sian-codes.github.io/siancodes",
   "private": false,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
