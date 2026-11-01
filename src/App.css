@@ -61,3 +61,18 @@
 .contact-email { overflow-wrap: anywhere; color: var(--muted); }
 .contact-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; margin-top: 20px; }
 .contact-status { min-height: 1.7em; margin-top: 12px; color: var(--muted); font-size: .8rem; }
+
+.android-project { margin-bottom: 24px; }
+.project-video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: var(--bg);
+}
+.project-video video {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  border-radius: 12px;
+}

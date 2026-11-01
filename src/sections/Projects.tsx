@@ -1,4 +1,12 @@
 import instagramScreenshot from '../assets/instadupe.png';
+import androidPoster from '../assets/android101-poster.jpg';
+
+const demoFiles = import.meta.glob('../assets/android101-demo.mp4', {
+    eager: true,
+    query: '?url',
+    import: 'default',
+});
+const androidDemo = Object.values(demoFiles)[0] as string | undefined;
 
 const professionalProjects = [
     {
@@ -41,6 +49,23 @@ const Projects = () => (
             ))}
         </div>
         <h3 className="work-group-title personal-work-title">Personal work</h3>
+        <article className={`project-card android-project${androidDemo ? '' : ' work-project'}`}>
+            {androidDemo && (
+                <div className="project-video">
+                    <video controls playsInline preload="none" poster={androidPoster} aria-label="Android 101 app demonstration">
+                        <source src={androidDemo} type="video/mp4" />
+                        Your browser does not support this video. <a href={androidDemo}>Download the demo</a>.
+                    </video>
+                </div>
+            )}
+            <div className="project-copy">
+                <p className="eyebrow">ANDROID APP</p>
+                <h3>Android 101</h3>
+                <p>A guide to Android development with short lessons, code examples and quizzes. I built it with Kotlin and Jetpack Compose, with offline content, saved progress and a reference section for common Android mistakes.</p>
+                <ul className="project-tags"><li>Kotlin</li><li>Jetpack Compose</li><li>Material 3</li><li>Light & dark themes</li></ul>
+                <a className="text-link" href="https://github.com/sian-codes/android101">View source code</a>
+            </div>
+        </article>
         <article className="project-card">
             <div className="project-image"><img src={instagramScreenshot} alt="Instagram interface clone showing its feed and navigation" loading="lazy" /></div>
             <div className="project-copy">
